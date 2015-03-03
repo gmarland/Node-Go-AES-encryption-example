@@ -1,6 +1,6 @@
-Node-Go-AES-encrytion-example
+Node Go AES encryption example
 =============================
-This is an example of how to encrypt a string using AES which is the passed between node.js and Go.
+This is an example of how to encrypt a string using AES which is then passed between node.js and Go.
 
 ## Overview
 I banged my head for quite a while in order to get AES encryption to work when sending a string between node.js and Go. Hopefully sharing this will stop others from having the same headaches.
