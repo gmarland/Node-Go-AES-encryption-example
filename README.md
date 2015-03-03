@@ -1,4 +1,4 @@
-Node-Go-AES-encrytion-example
+Node Go AES encryption example
 =============================
 This is an example of how to encrypt a string using AES which is the passed between node.js and Go.
 
