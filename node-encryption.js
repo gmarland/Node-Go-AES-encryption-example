@@ -34,13 +34,16 @@ exports.encrypt = function(content, key) {
 	// Create a new IV for the encryption. This doesnt need to be secured but should be unique for every encryption
 	var iv = createIV();
 
+	// Create the cipher for the encyption
     cipher = crypto.createCipheriv("aes-256-cbc", key.toString("binary"), iv);
 
+    // Set the encoding to hex. Some people choose base64 but I prefer hex as it will generate numbers which are more predictable
     cipher.setEncoding('hex');
     cipher.write(content);
     cipher.end();
 
     cipher_text = cipher.read();
 
+    // Create the encrypted text string using the "$" as a seperator of the IV which is needed for the decryption
     return cipher_text + "$" + iv.toString('hex');
 }
